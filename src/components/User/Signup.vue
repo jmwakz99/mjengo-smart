@@ -3,7 +3,7 @@
     <v-content>
       <v-container class="fill-height mt-0" fluid>
         <v-row no-gutters v-if="error">
-          <v-col cols="12" md="6" class="mx-auto">
+          <v-col cols="12" md="4" class="mx-auto">
             <alert-app :text="error" @dismissed="onClear"></alert-app>
           </v-col>
         </v-row>
@@ -123,6 +123,9 @@ export default {
           password: this.password,
           referralCode: this.referralCode
         });
+        if (this.error === error) {
+          return;
+        }
         this.$router.push("/signin");
       }
     },

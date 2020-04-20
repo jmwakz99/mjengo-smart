@@ -1,7 +1,7 @@
 <template>
   <v-app id="inspire">
     <v-content>
-      <v-container class="mt-0" fluid>
+      <v-container class="fill-height mt-0" fluid>
         <v-row align="center" v-if="error">
           <v-col cols="12" md="4" class="mx-auto">
             <alert-app :text="error" @dismissed="onClear"></alert-app>

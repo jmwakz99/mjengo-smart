@@ -17,6 +17,13 @@
             </v-row>
           </v-card>
         </v-col>
+        <v-col
+          cols="12"
+          sm="8"
+          md="4"
+          class="ml-12"
+          style="color: grey"
+        >This should be a video background</v-col>
       </v-row>
     </v-container>
     <Services></Services>
