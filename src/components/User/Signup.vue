@@ -1,7 +1,7 @@
 <template>
   <v-app id="inspire">
     <v-content>
-      <v-container class="fill-height" fluid>
+      <v-container class="fill-height mt-0" fluid>
         <v-row no-gutters v-if="error">
           <v-col cols="12" md="6" class="mx-auto">
             <alert-app :text="error" @dismissed="onClear"></alert-app>
@@ -78,14 +78,14 @@
 <script>
 export default {
   props: {
-    source: String,
+    source: String
   },
   data() {
     return {
       email: "",
       password: "",
       confirmPassword: "",
-      referralCode: "",
+      referralCode: ""
     };
   },
   computed: {
@@ -102,14 +102,14 @@ export default {
     },
     loading() {
       return this.$store.getters.loading;
-    },
+    }
   },
   watch: {
     user(value) {
       if (value !== null && value !== undefined) {
         this.$router.push("/");
       }
-    },
+    }
   },
 
   methods: {
@@ -121,15 +121,15 @@ export default {
         this.$store.dispatch("signUserUp", {
           email: this.email,
           password: this.password,
-          referralCode: this.referralCode,
+          referralCode: this.referralCode
         });
         this.$router.push("/signin");
       }
     },
     onClear() {
       this.$store.dispatch("clearError");
-    },
-  },
+    }
+  }
 };
 </script>
 <style scoped>

@@ -1,7 +1,7 @@
 <template>
   <v-app id="inspire">
     <v-content>
-      <v-container class="fill-height" fluid>
+      <v-container class="mt-0" fluid>
         <v-row align="center" justify="center">
           <v-col cols="12" sm="8" md="4">
             <p
@@ -9,7 +9,7 @@
             >Please enter your email address below and we will send you information to recover your account</p>
             <v-card class="elevation-12">
               <v-toolbar style="background-color:#bf1e2e;" dark flat>
-                <v-toolbar-title class="text--center">Forget Password</v-toolbar-title>
+                <v-toolbar-title class="text--center">Forgot Password</v-toolbar-title>
 
                 <v-spacer />
               </v-toolbar>

@@ -1,7 +1,7 @@
 <template>
   <v-app id="inspire">
     <v-content>
-      <v-container class="fill-height" fluid>
+      <v-container class="mt-0" fluid>
         <v-row align="center" v-if="error">
           <v-col cols="12" md="4" class="mx-auto">
             <alert-app :text="error" @dismissed="onClear"></alert-app>
@@ -35,7 +35,7 @@
                     required
                   ></v-text-field>
                   <v-card-actions>
-                    <v-btn type="submit" to="/reset" text color="white--text">Forgot Password?</v-btn>
+                    <v-btn type="submit" to="/reset" text style="color: red">Forgot Password?</v-btn>
                     <v-spacer />
                     <v-btn
                       :disabled="loading"
